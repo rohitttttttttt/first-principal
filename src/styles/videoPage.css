@@ -1,0 +1,227 @@
+.video-page-single {
+    max-width: 900px;
+}
+
+.video-page-with-playlist {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 24px;
+}
+
+.player-section {
+    width: 100%;
+}
+
+.player-wrapper {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--navy);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 33, 71, 0.12);
+}
+
+.player-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-details {
+    padding: 16px 0;
+}
+
+.video-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: var(--navy);
+}
+
+.video-stats {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: var(--text-light);
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--tan);
+}
+
+.channel-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+}
+
+.channel-avatar-sm {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--tan);
+}
+
+.channel-avatar-sm img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.channel-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.channel-subs {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.video-description {
+    padding: 16px 18px;
+    background: var(--white);
+    border-radius: var(--radius);
+    margin-top: 12px;
+    border: 1.5px solid var(--tan);
+    border-left: 4px solid var(--navy);
+}
+
+.video-description p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.7;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.desc-toggle {
+    display: inline-block;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.playlist-sidebar {
+    border: 1.5px solid var(--tan);
+    border-radius: var(--radius);
+    overflow: hidden;
+    max-height: calc(100vh - var(--nav-h) - 48px);
+    position: sticky;
+    top: calc(var(--nav-h) + 24px);
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    box-shadow: 0 2px 8px rgba(0, 33, 71, 0.06);
+}
+
+.playlist-sidebar-header {
+    padding: 12px 16px;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.playlist-sidebar-header h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--tan);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.playlist-sidebar-count {
+    font-size: 13px;
+    color: var(--tan);
+    opacity: 0.7;
+}
+
+.playlist-sidebar-list {
+    overflow-y: auto;
+    flex: 1;
+}
+
+.playlist-sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    transition: background 0.15s;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(210, 180, 140, 0.3);
+}
+
+.playlist-sidebar-item:hover {
+    background: rgba(210, 180, 140, 0.12);
+}
+
+.playlist-sidebar-item.active {
+    background: var(--tan);
+}
+
+.playlist-sidebar-idx {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-light);
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.playlist-sidebar-thumb {
+    width: 72px;
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--tan);
+}
+
+.playlist-sidebar-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.playlist-sidebar-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.playlist-sidebar-info h4 {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--text);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 2px;
+}
+
+.playlist-sidebar-info p {
+    font-size: 11px;
+    color: var(--text-light);
+}
+
+@media (max-width: 900px) {
+    .video-page-with-playlist {
+        grid-template-columns: 1fr;
+    }
+
+    .playlist-sidebar {
+        max-height: 340px;
+        position: static;
+    }
+}

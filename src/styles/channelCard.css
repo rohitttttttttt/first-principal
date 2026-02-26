@@ -1,0 +1,77 @@
+.channel-card {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 24px 16px;
+    border: 1.5px solid var(--tan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.25s;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 33, 71, 0.04);
+}
+
+.channel-card:hover {
+    border-color: var(--navy);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 33, 71, 0.1);
+}
+
+.channel-card .channel-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--tan);
+    margin-bottom: 10px;
+}
+
+.channel-card .channel-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.channel-card .channel-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 3px;
+}
+
+.channel-card .channel-subs {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.save-btn-channel {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--white);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s;
+    z-index: 5;
+    color: var(--text-light);
+    border: 1.5px solid var(--tan);
+}
+
+.save-btn-channel:hover {
+    color: var(--navy);
+    transform: scale(1.1);
+}
+
+.save-btn-channel.saved {
+    background: var(--tan);
+    color: var(--navy);
+    border-color: var(--tan);
+}

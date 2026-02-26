@@ -1,0 +1,11 @@
+@import './styles/global.css';
+@import './styles/navbar.css';
+@import './styles/sidebar.css';
+@import './styles/homePage.css';
+@import './styles/cards.css';
+@import './styles/channelCard.css';
+@import './styles/videoPage.css';
+@import './styles/playlistPage.css';
+@import './styles/channelPage.css';
+@import './styles/mobileNav.css';
+@import './styles/aboutPage.css';
